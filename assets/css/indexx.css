@@ -127,10 +127,6 @@ h5 {
     top: -5px;
 }
 
-.feature-box-1:hover h5 {
-    color: #ffffff;
-}
-
 .feature-box-1:hover p {
     color: rgba(255, 255, 255, 0.8);
 }
