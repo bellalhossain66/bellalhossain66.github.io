@@ -65,6 +65,9 @@ h5 {
     padding-left: 35%;
     padding-top: 10%;
 }
+.svg-icon img{
+    width: 60%;
+}
 
 .skills {
     font-size: 12px;
@@ -74,8 +77,47 @@ h5 {
     .svg-icon img {
         width: 20px;
     }
+    .about-me-sec div div{
+        text-align: center !important;
+    }
+    .svg-icon {
+        padding-left: 5%;
+        padding-top: 1%;
+    }
+    .svg-icon img{
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .svg-icon img {
+        width: 20px;
+    }
     .about-me-sec{
         text-align: center !important;
+    }
+    .svg-icon {
+        padding-left: 5%;
+        padding-top: 1%;
+    }
+    .svg-icon img{
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 599px) {
+    .svg-icon img {
+        width: 20px;
+    }
+    .about-me-sec{
+        text-align: center !important;
+    }
+    .svg-icon {
+        padding-left: 42%;
+        padding-top: 10%;
+    }
+    .svg-icon img{
+        width: 30%;
     }
 }
 
