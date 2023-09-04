@@ -68,6 +68,9 @@ h5 {
 .svg-icon img{
     width: 60%;
 }
+.svg-icon .lt-icon{
+    width: 40%;
+}
 
 .skills {
     font-size: 12px;
@@ -86,6 +89,9 @@ h5 {
     }
     .svg-icon img{
         width: 35%;
+    }
+    .svg-icon .lt-icon{
+        width: 25%;
     }
 }
 
