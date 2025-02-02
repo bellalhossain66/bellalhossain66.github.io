@@ -1,8 +1,9 @@
-body {
+body, html {
     margin: 0;
     left: 0;
     top: 0;
-    width: 100%;
+    width: 100% !important;
+    overflow-x: hidden;
 }
 
 .liveplayy span {
@@ -57,23 +58,49 @@ h6 {
 
 p,
 h6,
-h5 {
-    color: #6a6a6a;
+h5,
+ul li,
+.technical-skill ul a {
+    color: #585757;
 }
-
+.technical-skill{
+    margin: -5px;
+}
+.technical-skill ul {
+    list-style: none;
+}
+.technical-skill ul li ul{
+    list-style: disc;
+}
+.technical-skill ul li {
+    padding: 5px;
+}
 .svg-icon {
-    padding-left: 35%;
-    padding-top: 10%;
+    /* padding-left: 35%;
+    padding-top: 10%; */
+    margin: auto;
 }
 .svg-icon img{
     width: 60%;
 }
-.svg-icon .lt-icon{
-    width: 40%;
-}
 
 .skills {
     font-size: 12px;
+}
+
+::-webkit-scrollbar{
+    width: 6px;
+}
+::-webkit-scrollbar-track{
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb{
+    background: #037a1d;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover{
+    background: #ffffff;
 }
 
 @media only screen and (max-width: 768px) {
@@ -85,13 +112,9 @@ h5 {
     }
     .svg-icon {
         padding-left: 42%;
-        padding-top: 7%;
     }
     .svg-icon img{
         width: 35%;
-    }
-    .svg-icon .lt-icon{
-        width: 25%;
     }
 }
 
