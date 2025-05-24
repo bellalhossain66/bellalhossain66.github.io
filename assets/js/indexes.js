@@ -10,23 +10,39 @@ $(document).on('click', '.skill-item', function(event) {
 })
 
 $(document).ready(function(){
-    const start = new Date("2022-10-01");
-    const start2 = new Date("2025-03-01");
+    function calculateDuration(startDate, endDate) {
+        let start = new Date(startDate);
+        let end = new Date(endDate);
+
+        let years = end.getFullYear() - start.getFullYear();
+        let months = end.getMonth() - start.getMonth();
+        let days = end.getDate() - start.getDate();
+
+        if (days < 0) {
+            months--;
+            let prevMonth = new Date(end.getFullYear(), end.getMonth(), 0);
+            days += prevMonth.getDate();
+        }
+
+        if (months < 0) {
+            years--;
+            months += 12;
+        }
+
+        return { years, months, days };
+    }
+
     const now = new Date();
-    let years = now.getFullYear() - start.getFullYear();
-    let months = now.getMonth() - start.getMonth();
-    if (months < 0) {
-        years--;
-        months += 13;
-    }
-    $('#job-duration').text(years+'yr '+months+'mo');
-    years = now.getFullYear() - start2.getFullYear();
-    months = now.getMonth() - start2.getMonth();
-    if (months < 0) {
-        years--;
-        months += 13;
-    }else{
-        months = 1;
-    }
-    $('#job-duration2').text(years>0?(years+'yr '):''+months+'mo');
+    
+    const duration1 = calculateDuration("2022-10-01", now);
+    $('#job-duration').text(
+        `${duration1.years}y-${duration1.months}m-${duration1.days}d`
+    );
+
+    const duration2 = calculateDuration("2025-03-01", now);
+    const duration2Text = 
+        (duration2.years > 0 ? duration2.years + 'y-' : '') +
+        (duration2.months > 0 ? duration2.months + 'm-' : '') +
+        duration2.days + 'd';
+    $('#job-duration2').text(duration2Text.trim());
 });
