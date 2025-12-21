@@ -34,12 +34,12 @@ $(document).ready(function(){
 
     const now = new Date();
     
-    const duration1 = calculateDuration("2022-10-01", now);
+    const duration1 = calculateDuration("2022-10-10", now);
     $('#job-duration').text(
         `${duration1.years}y-${duration1.months}m-${duration1.days}d`
     );
 
-    const duration2 = calculateDuration("2025-03-01", now);
+    const duration2 = calculateDuration("2025-10-01", now);
     const duration2Text = 
         (duration2.years > 0 ? duration2.years + 'y-' : '') +
         (duration2.months > 0 ? duration2.months + 'm-' : '') +
