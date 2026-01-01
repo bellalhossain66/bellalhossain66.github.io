@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BELLAL HOSSAIN</title>
+    <link rel="icon" type="image" href="./assets/img/bb.jpeg" />
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        /* Clean Classical Timeline Styles */
+        .timeline {
+            position: relative;
+            padding: 20px 0;
+            list-style: none;
+            margin-left: 20px;
+            /* Space for the year on the left */
+        }
+
+        /* The vertical line */
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 110px;
+            /* Adjusted to sit between year and content */
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: #e5e7eb;
+            /* Soft gray line */
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 50px;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        /* The Year column */
+        .timeline-year {
+            min-width: 100px;
+            text-align: right;
+            font-weight: 700;
+            font-size: 0.9rem;
+            color: #10b981;
+            /* Your brand green */
+            padding-right: 30px;
+            margin-top: 4px;
+        }
+
+        /* The dot on the line */
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            left: 106px;
+            /* Centered on the 2px line (110 - 4px radius) */
+            top: 10px;
+            width: 10px;
+            height: 10px;
+            background: #fff;
+            border: 2px solid #10b981;
+            border-radius: 50%;
+            z-index: 1;
+            transition: all 0.3s ease;
+        }
+
+        /* Hover effect for a "live" feel */
+        .timeline-item:hover::after {
+            background: #10b981;
+            transform: scale(1.3);
+        }
+
+        /* Content side */
+        .timeline-content {
+            padding-left: 35px;
+            flex: 1;
+        }
+
+        .timeline-content h5 {
+            font-size: 1.15rem;
+            font-weight: 700;
+            margin: 0 0 4px 0;
+            color: #111827;
+        }
+
+        .timeline-content h6 {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #6b7280;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .timeline-content p {
+            font-size: 0.95rem;
+            color: #4b5563;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .timeline::before {
+                left: 15px;
+            }
+
+            .timeline-item {
+                flex-direction: column;
+            }
+
+            .timeline-item::after {
+                left: 11px;
+                top: 32px;
+            }
+
+            .timeline-year {
+                text-align: left;
+                padding-right: 0;
+                padding-left: 35px;
+                margin-bottom: 10px;
+                min-width: auto;
+            }
+
+            .timeline-content {
+                padding-left: 35px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="layout">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="profile-inline">
+                    <img src="assets/img/bbb.jpeg" alt="Bellal">
+                    <span>Bellal</span>
+                </div>
+                <button class="menu-btn" onclick="toggleMenu()">☰</button>
+            </div>
+
+            <div id="sidebarMenu" class="menu-wrapper">
+                <nav>
+                    <a href="index.html"><i class="fa fa-home"></i> Home</a>
+                    <a href="techstack.html"><i class="fa fa-code"></i> Tech Stack</a>
+                    <a href="journey.html" class="active"><i class="fa fa-plane"></i> Journey</a>
+                </nav>
+
+                <hr class="nav-divider">
+
+                <nav class="social-nav">
+                    <small class="nav-label">Online</small>
+                    <a href="https://github.com/bellalhossain66" target="_blank" class="social-link">
+                        <i class="fa fa-github"></i> GitHub
+                    </a>
+                    <a href="https://x.com/bellalhoss66" target="_blank" class="social-link">
+                        <i class="fa fa-twitter"></i> Twitter
+                    </a>
+                    <a href="https://www.linkedin.com/in/bellal-hossain/" target="_blank" class="social-link">
+                        <i class="fa fa-linkedin"></i> LinkedIn
+                    </a>
+                    <a href="https://www.producthunt.com/@bellal_hossain_n" target="_blank" class="social-link">
+                        <i class="fa fa-product-hunt"></i> Product Hunt
+                    </a>
+                </nav>
+            </div>
+        </aside>
+
+        <!-- Content -->
+        <main class="content">
+            <div class="container-fluid col-lg-8">
+
+                <section class="section">
+                    <h2 class="mb-5">My Journey</h2>
+
+                    <ul class="timeline">
+
+                        <li class="timeline-item">
+                            <div class="timeline-year">2025–Pres.</div>
+                            <div class="timeline-content">
+                                <h5>Founder & CEO – xResume</h5>
+                                <h6>SaaS & AI Innovation</h6>
+                                <p>Spearheading the development of an AI-driven career platform. Leading a small, agile
+                                    team to build scalable architectures, featuring real-time AI resume scoring,
+                                    automated formatting, and secure OAuth ecosystems.</p>
+                            </div>
+                        </li>
+
+                        <li class="timeline-item">
+                            <div class="timeline-year">2025</div>
+                            <div class="timeline-content">
+                                <h5>AI & Workflow Automation</h5>
+                                <h6>System Optimization</h6>
+                                <p>Integrated Large Language Models (LLMs) into production workflows to automate content
+                                    generation and data analysis, significantly reducing manual overhead and increasing
+                                    operational efficiency.</p>
+                            </div>
+                        </li>
+
+                        <li class="timeline-item">
+                            <div class="timeline-year">2025</div>
+                            <div class="timeline-content">
+                                <h5>Software Engineer – Sofof Tech</h5>
+                                <h6>Mar – Oct 2025</h6>
+                                <p>Architected robust backend systems using Node.js and TypeScript. Implemented
+                                    high-performance Redis queues and seamless payment gateway integrations for secure,
+                                    real-time transactions.</p>
+                            </div>
+                        </li>
+
+                        <li class="timeline-item">
+                            <div class="timeline-year">2024</div>
+                            <div class="timeline-content">
+                                <h5>Digital Solutions Architect</h5>
+                                <h6>Enterprise Consulting</h6>
+                                <p>Operated as a "one-man army" providing end-to-end technical consulting for
+                                    businesses, delivering custom software solutions from initial cloud setup to final
+                                    deployment.</p>
+                            </div>
+                        </li>
+
+                        <li class="timeline-item">
+                            <div class="timeline-year">2023</div>
+                            <div class="timeline-content">
+                                <h5>Full Stack Developer – Dhaka Tribune</h5>
+                                <h6>Media & Infrastructure</h6>
+                                <p>Optimized cloud infrastructure on AWS/GCP for a high-traffic news platform.
+                                    Contributed to the digital ePaper system, ensuring 99.9% uptime during peak traffic
+                                    periods.</p>
+                            </div>
+                        </li>
+
+                        <li class="timeline-item">
+                            <div class="timeline-year">2022</div>
+                            <div class="timeline-content">
+                                <h5>Fintech Specialist</h5>
+                                <h6>Payment Systems & Security</h6>
+                                <p>Focused on the secure integration of global and local payment APIs, ensuring PCI-DSS
+                                    compliance and developing robust anti-fraud transaction logic.</p>
+                            </div>
+                        </li>
+
+                        <li class="timeline-item">
+                            <div class="timeline-year">2018–23</div>
+                            <div class="timeline-content">
+                                <h5>Full-Stack & DevOps Mastery</h5>
+                                <h6>Core Technical Evolution</h6>
+                                <p>Deep-dived into modern engineering: mastered **NodeJS, NestJS, and React** while
+                                    implementing **CI/CD pipelines** via GitHub Actions and Buddy. Developed a strong
+                                    foundation in **System Design (CQRS, DDD)** and cloud management.</p>
+                            </div>
+                        </li>
+
+                        <li class="timeline-item">
+                            <div class="timeline-year">2018</div>
+                            <div class="timeline-content">
+                                <h5>Independent Engineering</h5>
+                                <h6>The POS Milestone</h6>
+                                <p>Successfully launched my first commercial POS software. Started my professional
+                                    journey by delivering bespoke web applications for local businesses and
+                                    international clients.</p>
+                            </div>
+                        </li>
+
+                        <li class="timeline-item">
+                            <div class="timeline-year">2016–20</div>
+                            <div class="timeline-content">
+                                <h5>BSc in Computer Science & Engineering</h5>
+                                <h6>GSTU – Academic Foundation</h6>
+                                <p>Graduated with a focus on Software Engineering. Actively participated in competitive
+                                    programming (C/C++), honing the algorithmic thinking that powers my current
+                                    architectural decisions.</p>
+                            </div>
+                        </li>
+
+                        <li class="timeline-item">
+                            <div class="timeline-year">1997</div>
+                            <div class="timeline-content">
+                                <h5>Genesis</h5>
+                                <p>The journey began in 1997.</p>
+                            </div>
+                        </li>
+
+                    </ul>
+
+                </section>
+            </div>
+        </main>
+
+    </div>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById("sidebarMenu").classList.toggle("show");
+        }
+    </script>
+</body>
+
+</html>

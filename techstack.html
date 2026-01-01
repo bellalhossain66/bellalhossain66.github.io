@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BELLAL HOSSAIN</title>
+  <link rel="icon" type="image" href="./assets/img/bb.jpeg" />
+  <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    :root {
+      --brand-green: #10b981;
+      --soft-bg: #f9fafb;
+      --text-main: #111827;
+      --text-muted: #6b7280;
+      --border-color: #e5e7eb;
+    }
+
+    .section-title {
+      font-weight: 800;
+      letter-spacing: -0.025em;
+      color: var(--text-main);
+    }
+
+    /* Tech Card Styling */
+    .tech-card {
+      background: #fff;
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 1.5rem;
+      height: 100%;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .tech-card:hover {
+      border-color: var(--brand-green);
+      box-shadow: 0 12px 20px -5px rgba(0, 0, 0, 0.04);
+    }
+
+    .tech-card h4 {
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--brand-green);
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+    }
+
+    .tech-card h4::after {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background: var(--border-color);
+      margin-left: 10px;
+    }
+
+    /* Classical Badge Styling */
+    .badge-stack {
+      display: inline-block;
+      padding: 5px 10px;
+      margin: 0 4px 8px 0;
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: #4b5563;
+      background: #fff;
+      border: 1px solid var(--border-color);
+      border-radius: 6px;
+      transition: all 0.2s ease;
+    }
+
+    .badge-stack:hover {
+      border-color: var(--brand-green);
+      color: var(--brand-green);
+      background: #f0fdf4;
+    }
+
+    .category-label {
+      display: block;
+      font-size: 0.7rem;
+      font-weight: 800;
+      color: var(--text-muted);
+      margin-bottom: 0.6rem;
+      text-transform: uppercase;
+      letter-spacing: 0.025em;
+    }
+
+    .tech-group {
+      margin-bottom: 1.5rem;
+    }
+
+    .tech-group:last-child {
+      margin-bottom: 0;
+    }
+
+    @media (max-width: 768px) {
+      .content {
+        padding-top: 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="layout">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <div class="profile-inline">
+          <img src="assets/img/bbb.jpeg" alt="Bellal">
+          <span>Bellal</span>
+        </div>
+        <button class="menu-btn" onclick="toggleMenu()">☰</button>
+      </div>
+
+      <div id="sidebarMenu" class="menu-wrapper">
+        <nav>
+          <a href="index.html"><i class="fa fa-home"></i> Home</a>
+          <a href="techstack.html" class="active"><i class="fa fa-code"></i> Tech Stack</a>
+          <a href="journey.html"><i class="fa fa-plane"></i> Journey</a>
+        </nav>
+
+        <hr class="nav-divider">
+
+        <nav class="social-nav">
+          <small class="nav-label">Online</small>
+          <a href="https://github.com/bellalhossain66" target="_blank" class="social-link">
+            <i class="fa fa-github"></i> GitHub
+          </a>
+          <a href="https://x.com/bellalhoss66" target="_blank" class="social-link">
+            <i class="fa fa-twitter"></i> Twitter
+          </a>
+          <a href="https://www.linkedin.com/in/bellal-hossain/" target="_blank" class="social-link">
+            <i class="fa fa-linkedin"></i> LinkedIn
+          </a>
+          <a href="https://www.producthunt.com/@bellal_hossain_n" target="_blank" class="social-link">
+            <i class="fa fa-product-hunt"></i> Product Hunt
+          </a>
+        </nav>
+      </div>
+    </aside>
+
+    <main class="content">
+      <div class="container-fluid col-lg-8">
+        <section class="section">
+          <h2 class="mt-5 mb-5">Tech Stack</h2>
+
+          <div class="row g-4">
+
+            <div class="col-md-6 col-xl-4">
+              <div class="tech-card">
+                <h4>Development Core</h4>
+                <div class="tech-group">
+                  <span class="category-label">Languages</span>
+                  <span class="badge-stack">TypeScript</span>
+                  <span class="badge-stack">JavaScript (Vanilla)</span>
+                  <span class="badge-stack">PHP</span>
+                  <span class="badge-stack">Go</span>
+                  <span class="badge-stack">C/C++</span>
+                </div>
+                <div class="tech-group">
+                  <span class="category-label">Frameworks</span>
+                  <span class="badge-stack">NodeJS</span>
+                  <span class="badge-stack">NestJS</span>
+                  <span class="badge-stack">ExpressJS</span>
+                  <span class="badge-stack">NextJS</span>
+                  <span class="badge-stack">ReactJS</span>
+                  <span class="badge-stack">Laravel</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-xl-4">
+              <div class="tech-card">
+                <h4>Coding Proficiency Portfolio</h4>
+                <div class="tech-group">
+                  <span class="category-label">UVA</span>
+                  <a href="https://uhunt.onlinejudge.org/id/831193" target="_blank"><span class="badge-stack">id/831193</span></a>
+                </div>
+                <div class="tech-group">
+                  <span class="category-label">CodeForces</span>
+                  <a href="https://codeforces.com/profile/bsmrstubellal" target="_blank"><span class="badge-stack">profile/bsmrstubellal</span></a>
+                </div>
+                <div class="tech-group">
+                  <span class="category-label">HackerRank</span>
+                  <a href="https://hackerrank.com/bellalhoss66" target="_blank"><span class="badge-stack">bellalhoss66</span></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-xl-4">
+              <div class="tech-card">
+                <h4>Architecture & Theory</h4>
+                <div class="tech-group">
+                  <span class="category-label">Patterns</span>
+                  <span class="badge-stack">CQRS</span>
+                  <span class="badge-stack">SOLID</span>
+                  <span class="badge-stack">DDD</span>
+                  <span class="badge-stack">Event-Driven Design</span>
+                  <span class="badge-stack">REST</span>
+                </div>
+                <div class="tech-group">
+                  <span class="category-label">Principles</span>
+                  <span class="badge-stack">OOP</span>
+                  <span class="badge-stack">Structured Programming</span>
+                  <span class="badge-stack">Ethical Hacking</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-xl-4">
+              <div class="tech-card">
+                <h4>Infra & Operations</h4>
+                <div class="tech-group">
+                  <span class="category-label">Cloud & Web Servers</span>
+                  <span class="badge-stack">DigitalOcean</span>
+                  <span class="badge-stack">AWS S3</span>
+                  <span class="badge-stack">Cloudflare</span>
+                  <span class="badge-stack">Vercel</span>
+                  <span class="badge-stack">Nginx</span>
+                  <span class="badge-stack">Apache</span>
+                  <span class="badge-stack">Virtual Machines</span>
+                </div>
+                <div class="tech-group">
+                  <span class="category-label">Stacks</span>
+                  <span class="badge-stack">MEAN</span>
+                  <span class="badge-stack">LAMP</span>
+                  <span class="badge-stack">XAMPP</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-xl-4">
+              <div class="tech-card">
+                <h4>Data Engineering</h4>
+                <div class="tech-group">
+                  <span class="category-label">Databases</span>
+                  <span class="badge-stack">PostgreSQL</span>
+                  <span class="badge-stack">MySQL</span>
+                  <span class="badge-stack">MongoDB</span>
+                  <span class="badge-stack">Redis</span>
+                </div>
+                <div class="tech-group">
+                  <span class="category-label">ORMs & Queues</span>
+                  <span class="badge-stack">TypeORM</span>
+                  <span class="badge-stack">Sequelize</span>
+                  <span class="badge-stack">Mongoose</span>
+                  <span class="badge-stack">BullMQ</span>
+                  <span class="badge-stack">Redux</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-xl-4">
+              <div class="tech-card">
+                <h4>Tools & Security</h4>
+                <div class="tech-group">
+                  <span class="category-label">Deployment & DevOps</span>
+                  <span class="badge-stack">CI/CD</span>
+                  <span class="badge-stack">GitHub</span>
+                  <span class="badge-stack">GitLab</span>
+                  <span class="badge-stack">Buddy Works</span>
+                  <span class="badge-stack">PuTTY</span>
+                  <span class="badge-stack">FileZilla</span>
+                </div>
+                <div class="tech-group">
+                  <span class="category-label">Auth & Security</span>
+                  <span class="badge-stack">JWT</span>
+                  <span class="badge-stack">OAuth2</span>
+                  <span class="badge-stack">Passport.js</span>
+                  <span class="badge-stack">Bcrypt.js</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-xl-4">
+              <div class="tech-card">
+                <h4>Ecosystem Libraries</h4>
+                <div class="tech-group">
+                  <span class="category-label">UI & Interaction</span>
+                  <span class="badge-stack">Tailwind</span>
+                  <span class="badge-stack">Ant Design</span>
+                  <span class="badge-stack">Bootstrap</span>
+                  <span class="badge-stack">Lottie.js</span>
+                  <span class="badge-stack">SweetAlert</span>
+                  <span class="badge-stack">Chart.js</span>
+                </div>
+                <div class="tech-group">
+                  <span class="category-label">Utilities</span>
+                  <span class="badge-stack">Axios</span>
+                  <span class="badge-stack">Fetch API</span>
+                  <span class="badge-stack">Multer</span>
+                  <span class="badge-stack">Moment.js</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("sidebarMenu").classList.toggle("show");
+    }
+  </script>
+</body>
+
+</html>
